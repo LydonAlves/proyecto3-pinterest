@@ -1,0 +1,66 @@
+#header {
+  height: 10vh;
+}
+
+#headerDiv {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#leftButtonsDiv {
+  width: max-content;
+  display: flex;
+  gap: 20px;
+  margin: 0 20px;
+}
+
+#leftButtonsDiv > button:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#leftButtonsDiv .ImgButton:first-child {
+  filter: none;
+}
+
+#searchDiv {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#rightButtonsDiv {
+  width: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  margin: 0 20px;
+}
+
+#rightButtonsDiv > .buttonWithImage:last-child > img {
+  width: 18px;
+  height: 15px;
+  padding-top: 4px;
+}
+
+@media only screen and (max-width: 767px) {
+  #leftButtonsDiv > .buttonWithText {
+    display: none;
+  }
+  #rightButtonsDiv > .buttonWithImage {
+    display: none;
+  }
+  #rightButtonsDiv > .buttonWithImage:last-child {
+    display: block;
+  }
+  #rightButtonsDiv,
+  #leftButtonsDiv {
+    width: 10%;
+  }
+}

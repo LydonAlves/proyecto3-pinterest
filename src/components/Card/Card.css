@@ -1,0 +1,93 @@
+.cardDiv {
+  width: 220px;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cardImg {
+  position: relative;
+  width: 100%;
+  min-height: 180px;
+  max-height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: filter 0.3s ease;
+}
+
+.cardImg:hover {
+  filter: brightness(50%);
+}
+
+.buttonsDiv {
+  width: 100%;
+  height: 100%;
+}
+
+#topButtonsDiv {
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#topButtonsDiv > button {
+  background-color: var(--color-400);
+  color: var(--color-100);
+}
+
+#topButtonsDiv > button:hover {
+  background-color: var(--color-500);
+  cursor: pointer;
+}
+
+#profileDiv {
+  padding-left: 4px;
+  cursor: pointer;
+}
+
+#profileDiv > button {
+  background-color: transparent;
+  border: none;
+  color: var(--color-100);
+  padding: 0;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+#profileDiv > button > img {
+  width: 10px;
+  height: 8px;
+  padding-top: 2px;
+  filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(176deg) brightness(103%)
+    contrast(103%);
+}
+
+#bottomButtonsDiv {
+  position: absolute;
+  z-index: 2;
+  bottom: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding-right: 8px;
+  gap: 10px;
+}
+
+#bottomButtonsDiv > .ButtonWithImage {
+  border: none;
+}
+
+#bottomButtonsDiv > .ButtonWithImage > img {
+  filter: invert(4%) sepia(6%) saturate(85%) hue-rotate(314deg) brightness(95%)
+    contrast(85%);
+}
+
+.hide {
+  display: none;
+}
