@@ -23,7 +23,7 @@
   align-items: center;
 }
 
-#leftButtonsDiv .ImgButton:first-child {
+#leftButtonsDiv .imgButton:first-child {
   filter: none;
 }
 

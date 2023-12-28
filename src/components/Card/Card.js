@@ -48,15 +48,13 @@ export const fetchAndAssignImages = async () => {
     }
     let images = await response.json()
     createCardsFromImages(images)
-    return images
   } catch (error) {
     console.error('Error fetching images:', error)
-    return []
   }
 }
 
 export const createCardsFromImages = (images) => {
-  const main = document.querySelector('#Main')
+  const main = document.querySelector('#main')
 
   images.forEach((image) => {
     const cardDiv = document.createElement('div')
