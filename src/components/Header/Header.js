@@ -1,57 +1,57 @@
 import './Header.css'
-import { ButtonWithText, ButtonWithImage } from '../Button/Button'
-import { CreateSearchElements } from '../Search/Search'
-const Search = CreateSearchElements
+import { buttonWithText, buttonWithImage } from '../Button/Button'
+import { createSearchElements } from '../Search/Search'
+const search = createSearchElements
 
-export const CreateHeader = () => {
-  const Header = document.createElement('header')
-  const HeaderDiv = document.createElement('div')
-  const LeftButtonsDiv = document.createElement('div')
-  const SearchDiv = document.createElement('div')
-  const RightButtonsDiv = document.createElement('div')
+export const createHeader = () => {
+  const header = document.createElement('header')
+  const headerDiv = document.createElement('div')
+  const leftButtonsDiv = document.createElement('div')
+  const searchDiv = document.createElement('div')
+  const rightButtonsDiv = document.createElement('div')
 
-  Header.id = 'Header'
-  HeaderDiv.id = 'HeaderDiv'
-  LeftButtonsDiv.id = 'LeftButtonsDiv'
-  SearchDiv.id = 'SearchDiv'
-  RightButtonsDiv.id = 'RightButtonsDiv'
+  header.id = 'header'
+  headerDiv.id = 'headerDiv'
+  leftButtonsDiv.id = 'leftButtonsDiv'
+  searchDiv.id = 'searchDiv'
+  rightButtonsDiv.id = 'rightButtonsDiv'
 
-  HeaderDiv.append(LeftButtonsDiv)
-  HeaderDiv.append(SearchDiv)
-  HeaderDiv.append(RightButtonsDiv)
-  Header.append(HeaderDiv)
-  document.body.appendChild(Header)
+  headerDiv.append(leftButtonsDiv)
+  headerDiv.append(searchDiv)
+  headerDiv.append(rightButtonsDiv)
+  header.append(headerDiv)
+  document.body.appendChild(header)
 }
-CreateHeader()
-const LeftDiv = document.querySelector('#LeftButtonsDiv')
+createHeader()
+const LeftDiv = document.querySelector('#leftButtonsDiv')
 // console.log(LeftDiv)
-LeftDiv.innerHTML = `
-${ButtonWithImage({
+leftDiv.innerHTML = `
+${buttonWithImage({
   size: 'm',
   imageUrl: './public/icons/logo-pinterest.png'
 })}
-${ButtonWithText({ texto: 'Home' })}
-${ButtonWithText({ texto: 'Create' })} 
+${buttonWithText({ texto: 'Home' })}
+${buttonWithText({ texto: 'Create' })} 
  `
 
-const RightDiv = document.querySelector('#RightButtonsDiv')
-RightDiv.innerHTML = `
-${ButtonWithImage({
+const rightDiv = document.querySelector('#rightButtonsDiv')
+rightDiv.innerHTML = `
+${buttonWithImage({
   size: 'm',
   imageUrl: './public/icons/notification.png'
 })}
-${ButtonWithImage({
+${buttonWithImage({
   size: 'm',
   imageUrl: './public/icons/chat.png'
 })}
-${ButtonWithImage({
+${buttonWithImage({
   size: 'm',
   imageUrl: './public/icons/dots.png'
 })}
-${ButtonWithImage({
+${buttonWithImage({
   size: 'm',
   imageUrl: './public/icons/dropDown.png'
 })}
 `
-const SearchDiv = document.querySelector('#SearchDiv')
-CreateSearchElements(SearchDiv)
+const searchDiv = document.querySelector('#searchDiv')
+createSearchElements(searchDiv)
