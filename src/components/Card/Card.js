@@ -16,17 +16,17 @@ const createCardButtons = (parent) => {
   ${buttonWithText({ texto: 'Profile', size: 's' })}
   ${buttonWithImage({
     size: 's',
-    imageUrl: './public/icons/dropDown.png'
+    imageUrl: '/icons/dropDown.png'
   })}
   `
 
   bottomButtonsDiv.id = 'bottomButtonsDiv'
   bottomButtonsDiv.innerHTML = `
 ${buttonWithImage({
-  imageUrl: './public/icons/upload.png'
+  imageUrl: '/icons/upload.png'
 })}
 ${buttonWithImage({
-  imageUrl: './public/icons/dots.png'
+  imageUrl: '/icons/dots.png'
 })}
 `
   topButtonsDiv.append(profileDiv)

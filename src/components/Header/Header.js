@@ -27,7 +27,7 @@ const leftDiv = document.querySelector('#leftButtonsDiv')
 leftDiv.innerHTML = `
 ${buttonWithImage({
   size: 'm',
-  imageUrl: './public/icons/logo-pinterest.png'
+  imageUrl: '/icons/logo-pinterest.png'
 })}
 ${buttonWithText({ texto: 'Home' })}
 ${buttonWithText({ texto: 'Create' })} 
@@ -37,19 +37,19 @@ const rightDiv = document.querySelector('#rightButtonsDiv')
 rightDiv.innerHTML = `
 ${buttonWithImage({
   size: 'm',
-  imageUrl: './public/icons/notification.png'
+  imageUrl: '/icons/notification.png'
 })}
 ${buttonWithImage({
   size: 'm',
-  imageUrl: './public/icons/chat.png'
+  imageUrl: '/icons/chat.png'
 })}
 ${buttonWithImage({
   size: 'm',
-  imageUrl: './public/icons/dots.png'
+  imageUrl: '/icons/dots.png'
 })}
 ${buttonWithImage({
   size: 'm',
-  imageUrl: './public/icons/dropDown.png'
+  imageUrl: '/icons/dropDown.png'
 })}
 `
 const searchDiv = document.querySelector('#searchDiv')

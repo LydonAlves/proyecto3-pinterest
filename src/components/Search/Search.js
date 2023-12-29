@@ -12,11 +12,11 @@ export const createSearchElements = (parentElement) => {
   const exitButton = document.createElement('button')
   const exitImg = document.createElement('img')
 
-  searchImg.src = './public/icons/magnify-grey.png'
+  searchImg.src = '/icons/magnify-grey.png'
   searchImg.alt = 'magnifying glass'
   searchImg.className = 'magnifyingGlass'
   exitButton.id = 'exitButton'
-  exitImg.src = './public/icons/simbolo-x.png'
+  exitImg.src = '/icons/simbolo-x.png'
   exitImg.alt = 'exit button'
   exitImg.className = 'exitImg'
   searchInputDiv.id = 'searchInputDiv'
@@ -31,7 +31,6 @@ export const createSearchElements = (parentElement) => {
 }
 
 export const searchImages = async (searchQuery) => {
-  // console.log(searchQuery)
   try {
     const response = await fetch(
       `https://api.unsplash.com/search/photos?query=${searchQuery}&client_id=${accessKey}`

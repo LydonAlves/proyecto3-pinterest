@@ -79,11 +79,11 @@
   gap: 10px;
 }
 
-#bottomButtonsDiv > .ButtonWithImage {
+#bottomButtonsDiv > .buttonWithImage {
   border: none;
 }
 
-#bottomButtonsDiv > .ButtonWithImage > img {
+#bottomButtonsDiv > .buttonWithImage > img {
   filter: invert(4%) sepia(6%) saturate(85%) hue-rotate(314deg) brightness(95%)
     contrast(85%);
 }
