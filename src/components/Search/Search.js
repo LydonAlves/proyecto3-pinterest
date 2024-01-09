@@ -4,6 +4,7 @@ import {
   createCardsFromImages,
   fetchAndAssignImages
 } from '../Card/Card'
+import { createNotification } from '../NoResultFound/NoResultFound'
 
 export const createSearchElements = (parentElement) => {
   const searchInputDiv = document.createElement('div')
@@ -40,7 +41,13 @@ export const searchImages = async (searchQuery) => {
     }
 
     let searchData = await response.json()
-    console.log(searchData.results)
+    console.log('it works' + searchData.results)
+
+    if (searchData.results.length === 0) {
+      createNotification()
+      return []
+    }
+
     createCardsFromImages(searchData.results)
   } catch (error) {
     console.error('Error fetching images:', error)

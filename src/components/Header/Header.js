@@ -23,6 +23,7 @@ export const createHeader = () => {
   document.body.appendChild(header)
 }
 createHeader()
+
 const leftDiv = document.querySelector('#leftButtonsDiv')
 leftDiv.innerHTML = `
 ${buttonWithImage({

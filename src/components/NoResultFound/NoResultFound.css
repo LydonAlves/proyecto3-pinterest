@@ -1,0 +1,12 @@
+.notificationDiv {
+  width: 1380px;
+  display: flex;
+  justify-content: center;
+  margin-top: var(--margin-m);
+}
+
+.notification {
+  font-size: large;
+  width: max-content;
+  align-self: center;
+}
