@@ -39,6 +39,7 @@
   background-color: white;
   border: none;
 }
+
 .buttonWithImage.m:hover {
   background-color: #dddedd;
 }

@@ -1,3 +1,4 @@
+import { showCardButtons } from '../Card/Card'
 import './Main.css'
 
 export const createMain = () => {

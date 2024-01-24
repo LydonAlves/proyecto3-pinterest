@@ -24,7 +24,7 @@
   height: 100%;
 }
 
-#topButtonsDiv {
+.topButtonsDiv {
   position: absolute;
   z-index: 2;
   top: 12px;

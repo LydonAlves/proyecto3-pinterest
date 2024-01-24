@@ -2,16 +2,20 @@ import './Card.css'
 import { buttonWithText, buttonWithImage } from '../Button/Button'
 
 const createCardButtons = (parent) => {
+  const buttonsDiv = document.createElement('div')
   const topButtonsDiv = document.createElement('div')
   const profileDiv = document.createElement('div')
   const bottomButtonsDiv = document.createElement('div')
 
-  topButtonsDiv.id = 'topButtonsDiv'
+  buttonsDiv.classList.add('buttonsDiv', 'hide')
+  topButtonsDiv.classList.add('topButtonsDiv')
+  profileDiv.id = 'profileDiv'
+  bottomButtonsDiv.id = 'bottomButtonsDiv'
+
   topButtonsDiv.innerHTML = `
   ${buttonWithText({ texto: 'Save', size: 's' })}
   `
 
-  profileDiv.id = 'profileDiv'
   profileDiv.innerHTML = `
   ${buttonWithText({ texto: 'Profile', size: 's' })}
   ${buttonWithImage({
@@ -20,7 +24,6 @@ const createCardButtons = (parent) => {
   })}
   `
 
-  bottomButtonsDiv.id = 'bottomButtonsDiv'
   bottomButtonsDiv.innerHTML = `
 ${buttonWithImage({
   imageUrl: '/icons/upload.png'
@@ -30,8 +33,24 @@ ${buttonWithImage({
 })}
 `
   topButtonsDiv.append(profileDiv)
-  parent.append(topButtonsDiv)
-  parent.append(bottomButtonsDiv)
+  buttonsDiv.append(topButtonsDiv)
+  buttonsDiv.append(bottomButtonsDiv)
+  parent.append(buttonsDiv)
+}
+
+export const showCardButtons = () => {
+  const cardDiv = document.querySelectorAll('.cardDiv')
+  cardDiv.forEach((div) => {
+    // console.log(div)
+    const buttonsDiv = div.querySelector('.buttonsDiv')
+    // console.log(buttonsDiv)
+    div.addEventListener('mouseover', () => {
+      buttonsDiv.classList.remove('hide')
+    })
+    div.addEventListener('mouseleave', () => {
+      buttonsDiv.classList.add('hide')
+    })
+  })
 }
 
 export const accessKey = 'uVuCB7MqJE96NZEmciVwZlg4185EI7RY8BUy_DkvJfM'
@@ -64,17 +83,9 @@ export const createCardsFromImages = (images) => {
     cardImg.className = 'cardImg'
     cardImg.src = image.urls.regular
 
-    // cardDiv.addEventListener('mouseenter', () => {
-    //   console.log('Mouse entered')
-    //   topButtons.classList.add('hide')
-    // })
-    // cardDiv.addEventListener('mouseleave', () => {
-    //   console.log('Mouse left')
-    //   topButtons.classList.remove('hide')
-    // })
-
     cardDiv.append(cardImg)
     main.append(cardDiv)
     createCardButtons(cardDiv)
   })
+  showCardButtons()
 }
